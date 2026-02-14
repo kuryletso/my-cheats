@@ -29,9 +29,12 @@ jobs:
 
       # Step 3: Commit and push index
       - name: Commit changes
+	env:
+	  GH_token: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+	  git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/kuryletso/my-cheats.git
           git add index
           git commit -m "Auto-generate index" || exit 0
           git push
