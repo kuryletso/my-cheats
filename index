@@ -16,3 +16,32 @@ echo "7 / 2" | bc
 echo "scale=3; sqrt(7 / 5)" | bc -l
 echo 'n=8; m=10; if(n>m) {print "n is greater"} else {print "m is greater"}' | bc -l
 
+
+===== git =====
+
+# check status
+git status
+git fetch
+
+# update local repo from gihub
+git pull origin main
+git pull --rebase origin main # if diverged
+
+# add and commit
+git add .
+git commit -m "Made changes"
+# push local changes to github
+git push origin main
+git push
+
+
+===== stow =====
+
+# create symlinks
+stow bash
+stow .
+
+# delete symlinks
+stow -D bash
+
+
