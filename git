@@ -1,0 +1,14 @@
+# check status
+git status
+git fetch
+
+# update local repo from gihub
+git pull origin main
+git pull --rebase origin main # if diverged
+
+# add and commit
+git add .
+git commit -m "Made changes"
+# push local changes to github
+git push origin main
+git push

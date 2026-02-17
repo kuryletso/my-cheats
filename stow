@@ -1,0 +1,7 @@
+# create symlinks
+stow bash
+stow .
+
+# delete symlinks
+stow -D bash
+
