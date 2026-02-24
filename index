@@ -24,15 +24,19 @@ git status
 git fetch
 
 # update local repo from gihub
-git pull origin main
 git pull --rebase origin main # if diverged
 
-# add and commit
+# add, rm and commit
 git add .
+git rm --cached .DS_Store
 git commit -m "Made changes"
+
+# reset last commit
+git reset HEAD~1
+git reset --hard HEAD~1 # discard changes
+
 # push local changes to github
 git push origin main
-git push
 
 
 ===== stow =====
