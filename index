@@ -16,6 +16,11 @@ echo "7 / 2" | bc
 echo "scale=3; sqrt(7 / 5)" | bc -l
 echo 'n=8; m=10; if(n>m) {print "n is greater"} else {print "m is greater"}' | bc -l
 
+# string processing
+grep -o . # print each character in new line
+echo "apple" | grep -o . | sort | uniq | wc -l
+echo 'A_p p!l?E' | tr -cd [:alpha:] | tr [:upper:] [:lower:] # "apple"
+
 
 ===== git =====
 
