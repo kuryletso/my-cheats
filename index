@@ -12,8 +12,9 @@ awk -F"," '{sum += $3} END {print sum}'
 awk -v myvar="$foo" 'BEGIN {print "My variable is:", myvar}'
 
 # bc tamplate
-echo "7 / 2" | bc
 echo "scale=3; sqrt(7 / 5)" | bc -l
+echo "obase=2; 22" | bc # decimal to binary 
+echo "$((2#10110))" # binary to decimal
 echo 'n=8; m=10; if(n>m) {print "n is greater"} else {print "m is greater"}' | bc -l
 
 # string processing
