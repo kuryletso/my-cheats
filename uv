@@ -1,0 +1,20 @@
+# project setup
+uv init
+uv add httpx # to install package and add it to dependencies
+uv add --dev httpx # add in dev dependency group
+uv remove httpx
+uv sync # synchronize with uv.lock
+
+# python
+uv python list
+uv python install 3.12
+uv pin 3.11 # lock project to specific Python version
+uv pip list
+uv pip install -r requirements.txt
+uv pip compile pyproject.toml -o requirements.txt # generate req file
+uv pip freeze # print installed packaged in req. format
+
+# install
+uv pip install -e . # editable installation
+uv tool install -e .
+uv tool install https://github.com/username/repo.git
