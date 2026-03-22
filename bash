@@ -23,3 +23,7 @@ while getops ":w:cb:" option; do # flags -w, -c, -b; -w and -b require argument
     *) ;;
   esac
 done
+
+# environment
+export # to show current shell attributes
+compgen -A function # to show available functions
