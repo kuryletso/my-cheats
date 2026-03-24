@@ -16,6 +16,9 @@ echo "apple" | grep -o . | sort | uniq | wc -l
 echo 'A_p p!l?E' | tr -cd [:alpha:] | tr [:upper:] [:lower:] # "apple"
 IFS=',' read -r -a arr <<< "apple, banana, orange" # arr=(apple banana orange)
 
+# printf
+printf '%(%Y-%m-%dT%H:%M:%S)T\n' "$epoch" # unix ts to ISO
+
 # argument parsing
 while getops ":w:cb:" option; do # flags -w, -c, -b; -w and -b require argument
   case $option in
