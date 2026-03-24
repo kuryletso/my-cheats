@@ -10,6 +10,11 @@ echo "obase=2; 22" | bc # decimal to binary
 echo "$((2#10110))" # binary to decimal
 echo 'n=8; m=10; if(n>m) {print "n is greater"} else {print "m is greater"}' | bc -l
 
+# navigation
+find src/myapp -type d -exec touch {}/__init__.py \; 
+find . -empty
+find . -iname "readme.*" -type f -mtime -1 -exec grep -l "TODO" {} \; # case-insensitive name, type file, mod-time past 1 day
+
 # string processing
 grep -o . # print each character in new line
 echo "apple" | grep -o . | sort | uniq | wc -l
