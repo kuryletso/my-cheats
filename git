@@ -16,3 +16,7 @@ git reset --hard HEAD~1 # discard changes
 
 # push local changes to github
 git push origin main
+
+# create local (repo-level) alias for script, supports passing commands directly or via file, "!" makes it a shell command
+git config --local alias.review '!scripts/file.sh'
+git config --local alias.hello '!echo jello | tr j H'
